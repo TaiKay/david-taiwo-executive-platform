@@ -25,6 +25,10 @@ The CV and media-kit actions use the browser print dialogue, allowing hosts and 
 
 The shared CSS layer defines the responsive section rhythm, glass navigation, high-contrast focus treatment, premium hover surfaces and action states. Shared `Reveal`, `PageHero`, navigation and Ask David components preserve reduced-motion preferences while keeping client-side animation work limited to interactive surfaces.
 
+## MDX insights
+
+The Insights pages use `@next/mdx` with MDX 3 and React 19. App Router requires the `src/mdx-components.tsx` convention; it provides server-compatible element mappings for every MDX route. Keep this file in place when adding articles under `src/app/insights`.
+
 ## Run locally
 
 1. Install Node 20.9 or newer.
