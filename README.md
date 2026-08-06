@@ -21,6 +21,10 @@ The CV and media-kit actions use the browser print dialogue, allowing hosts and 
 - Motion respects the user’s reduced-motion preference. Image loading is limited to the flagship case-studies hero; all other visual storytelling is CSS-led.
 - Vercel Analytics is enabled globally. `EngagementLink` is the reusable hook for measuring high-intent navigation events.
 
+## RC-2 visual system
+
+The shared CSS layer defines the responsive section rhythm, glass navigation, high-contrast focus treatment, premium hover surfaces and action states. Shared `Reveal`, `PageHero`, navigation and Ask David components preserve reduced-motion preferences while keeping client-side animation work limited to interactive surfaces.
+
 ## Run locally
 
 1. Install Node 20.9 or newer.
