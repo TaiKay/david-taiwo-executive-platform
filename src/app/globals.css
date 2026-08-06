@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --navy:#071B3A; --gold:#C8A45D; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { color:#10213D; background:#fff; font-family:var(--font-inter),sans-serif; }
+::selection { background:#C8A45D; color:#071B3A; }
+.grid-fade { background-image:linear-gradient(rgba(23,105,224,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(23,105,224,.06) 1px,transparent 1px); background-size:48px 48px; }
+.eyebrow { @apply mb-4 text-xs font-bold uppercase tracking-[.2em] text-royal; }
+.section { @apply mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:py-28; }
+.focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2; }
