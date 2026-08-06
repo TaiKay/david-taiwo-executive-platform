@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --navy:#071B3A; --gold:#C8A45D; }
+:root { --navy:#071B3A; --gold:#C8A45D; --ink:#10213D; --muted:#52627A; --rule:#E6ECF4; --space-section:clamp(4.5rem,9vw,8rem); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { color:#10213D; background:#fff; font-family:var(--font-inter),sans-serif; text-rendering:optimizeLegibility; }
+body { color:var(--ink); background:#fff; font-family:var(--font-inter),sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; }
 ::selection { background:#C8A45D; color:#071B3A; }
-.grid-fade { background-image:linear-gradient(rgba(23,105,224,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(23,105,224,.06) 1px,transparent 1px); background-size:48px 48px; }
+button, a, input, textarea { -webkit-tap-highlight-color:transparent; }
+.grid-fade { background-image:linear-gradient(rgba(23,105,224,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,105,224,.055) 1px,transparent 1px); background-size:48px 48px; }
 .eyebrow { @apply mb-4 text-xs font-bold uppercase tracking-[.2em] text-royal; }
-.section { @apply mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:py-32; }
+.section { @apply mx-auto max-w-7xl px-5 sm:px-8; padding-top:var(--space-section); padding-bottom:var(--space-section); }
 .focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2; }
+.glass-nav { @apply border-b border-white/60 bg-white/75 shadow-[0_1px_0_rgba(7,27,58,.04)] backdrop-blur-xl; }
+.surface { @apply rounded-2xl border border-slate-100 bg-white shadow-card; }
+.interactive-surface { @apply surface transition duration-300 ease-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_22px_65px_rgba(7,27,58,.14)]; }
+.action-primary { @apply focus-ring rounded-full bg-navy px-5 py-3 font-semibold text-white transition duration-200 hover:-translate-y-px hover:bg-royal active:translate-y-0; }
+.action-secondary { @apply focus-ring rounded-full border border-slate-300 bg-white px-5 py-3 font-semibold text-navy transition duration-200 hover:-translate-y-px hover:border-gold hover:bg-gold/10 active:translate-y-0; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; } }
 @media print { header, footer, .print\\:hidden { display:none !important; } body { color:#071B3A; } .section { max-width:none; padding:2rem; } }
