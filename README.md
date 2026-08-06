@@ -35,3 +35,11 @@ The shared CSS layer defines the responsive section rhythm, glass navigation, hi
 ## Deploy
 
 Import the repository into Vercel. The framework is detected automatically. Add `OPENAI_API_KEY` and optionally `OPENAI_MODEL` in Vercel Environment Variables before deploying. Set the production domain to `davidtaiwo.com` once it is available; canonical URLs, sitemap, robots, schema markup and generated social previews are already configured for that domain.
+
+## RC-3 launch checklist
+
+1. Add `OPENAI_API_KEY` before enabling Ask David.
+2. Optionally add `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `NEXT_PUBLIC_CLARITY_PROJECT_ID`; scripts load only when their IDs are present.
+3. Run `npm ci`, `npm run lint` and `npm run build` in the Vercel build environment.
+4. Run Lighthouse on the deployed production URL for mobile and desktop, then verify keyboard navigation, mail-client contact flow, Open Graph preview, sitemap and robots.
+5. Confirm the supplied security headers in the deployed response. The assistant accepts JSON only, validates same-origin browser requests and sends no-store responses.
