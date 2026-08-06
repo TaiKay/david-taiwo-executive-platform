@@ -6,12 +6,20 @@ Production Next.js 15 executive platform for David Taiwo.
 
 - Executive Digital Headquarters: `/dashboard`
 - Innovation Lab: `/portfolio`
+- Flagship case studies: `/case-studies`
 - Global opportunities: `/opportunities`
 - Speaking platform: `/speaking`
 - Publications library: `/publications`
 - Executive media kit: `/media-kit`
 
 The CV and media-kit actions use the browser print dialogue, allowing hosts and recruiters to save the current, responsive executive profile as a PDF.
+
+## Release candidate readiness
+
+- Local editorial imagery is rendered with `next/image`; Vercel automatically serves responsive AVIF or WebP derivatives.
+- Generated social previews are served by the `opengraph-image` route and carry no client-side image payload.
+- Motion respects the user’s reduced-motion preference. Image loading is limited to the flagship case-studies hero; all other visual storytelling is CSS-led.
+- Vercel Analytics is enabled globally. `EngagementLink` is the reusable hook for measuring high-intent navigation events.
 
 ## Run locally
 
